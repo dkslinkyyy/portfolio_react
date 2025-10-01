@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import Particles from "./components/Particles";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <main>
+      <div style={{ width: "100%", height: "100%", position: "relative" }}>
+        <Particles
+          particleColors={["#FFFCFB", "#FFFCFB"]}
+          particleCount={1000}
+          particleSpread={20}
+          speed={0.1}
+          cameraDistance={60}
+          particleBaseSize={150}
+          moveParticlesOnHover={false}
+          alphaParticles={false}
+          disableRotation={false}
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+      <div className="hero">
+        <div className="portrait">
+          <img src="https://dkslinkyyy.dev/assets/portrait-large.jpg" alt="" />
+        </div>
+        <div className="hero-description">
+          <h1>Dawid Kowalski</h1>
+          <p>Utvecklare och mycket mer..</p>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </main>
+  );
 }
 
-export default App
+export default App;
