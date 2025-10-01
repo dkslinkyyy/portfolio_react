@@ -3,6 +3,7 @@ main {
   height: 100vh;
   position: relative; /* viktig för att overlay ska funka */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -36,4 +37,30 @@ main {
   width: 100%;
   object-fit: cover;
   object-position: 100% 70%;
+}
+
+.projects {
+  position: absolute;
+  bottom: -10%;
+  width: 50%;
+  height: 20%;
+  z-index: 3;
+  background-color: #141414;
+  opacity: 90%;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.projects:hover {
+  height: 30%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.soon {
+  margin-top: 5vh;
 }

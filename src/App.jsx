@@ -1,6 +1,8 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./App.css";
 import Particles from "./components/Particles";
 import SocialIcons from "./components/socials/SocialIcons";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 function App() {
   return (
     <main>
@@ -28,6 +30,14 @@ function App() {
         </div>
         <div className="socials">
           <SocialIcons />
+        </div>
+      </div>
+
+      <div className="projects">
+        <div className="content">
+          <h2>Projects</h2>
+          <FontAwesomeIcon icon={faArrowDown} style={{ fontSize: "24px" }} />
+          <p className="soon">Coming soon..</p>
         </div>
       </div>
     </main>
