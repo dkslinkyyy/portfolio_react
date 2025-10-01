@@ -1,6 +1,6 @@
 import "./App.css";
 import Particles from "./components/Particles";
-
+import SocialIcons from "./components/socials/SocialIcons";
 function App() {
   return (
     <main>
@@ -25,6 +25,9 @@ function App() {
         <div className="hero-description">
           <h1>Dawid Kowalski</h1>
           <p>Utvecklare och mycket mer..</p>
+        </div>
+        <div className="socials">
+          <SocialIcons />
         </div>
       </div>
     </main>
