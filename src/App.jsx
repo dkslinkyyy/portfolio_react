@@ -20,25 +20,67 @@ function App() {
         />
       </div>
 
-      <div className="hero">
-        <div className="portrait">
-          <img src="https://dkslinkyyy.dev/assets/portrait-large.jpg" alt="" />
-        </div>
-        <div className="hero-description">
-          <h1>Dawid Kowalski</h1>
-          <p>Hello, I am Dawid. A self-taught developer pursuing my dreams!</p>
-        </div>
-        <div className="socials">
-          <SocialIcons />
-        </div>
-      </div>
+      <div className="background">
+        <section className="hero">
+          <div className="hero-portrait">
+            <div className="portrait">
+              <img
+                src="https://dkslinkyyy.dev/assets/portrait-large.jpg"
+                alt=""
+              />
+            </div>
 
-      <div className="projects">
-        <div className="content">
+            <SocialIcons />
+          </div>
+
+          <div className="hero-description">
+            <h1>Hello, I am Dawid!</h1>
+            <p>I am a self-taught developer pursuing my dreams!</p>
+            <p>Been coding on & off since 2015</p>
+            <p>I like the gym, exercising and just being active.</p>
+          </div>
+        </section>
+
+        <section className="tech-stack">
+          <h2>Tech Stack</h2>
+          <p>This is some tools i use to do my work</p>
+
+          <div className="section">
+            <div className="icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" />
+            </div>
+            <div className="icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+            </div>
+            <div className="icon">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg" />
+            </div>
+            <div className="icon">
+              <div className="icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="projects">
           <h2>Projects</h2>
-          <FontAwesomeIcon icon={faArrowDown} style={{ fontSize: "24px" }} />
-          <p className="soon">Coming soon..</p>
-        </div>
+          <div className="project">
+            <a
+              href="https://lagomkul.se"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project"
+            >
+              <div className="overlay">
+                <p>Lagomkul.se</p>
+              </div>
+              <div className="project-img">
+                <img src="/lagomkul.png" alt="Lagomkul project" />
+              </div>
+            </a>
+          </div>
+        </section>
       </div>
     </main>
   );

@@ -6,23 +6,30 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: #000000;
 }
 
 .hero {
-  position: absolute;
   height: 100%;
   width: 100%;
   display: flex;
-  z-index: 2;
-  justify-content: center;
-  align-items: center;
+  z-index: 3;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 2vh;
+}
+
+.hero-portrait {
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 1vh;
 }
 
 .hero-description {
-  text-align: center;
+  text-align: left;
+  width: 100%;
 }
 
 .portrait {
@@ -39,20 +46,21 @@ main {
   object-position: 100% 70%;
 }
 
-.projects {
+.background {
   position: absolute;
-  bottom: -10%;
-  width: 50%;
-  height: 20%;
-  z-index: 3;
-  background-color: #141414;
-  opacity: 90%;
-  border-radius: 20px;
-  transition: all 0.2s ease-in-out;
-}
-
-.projects:hover {
-  height: 30%;
+  height: auto;
+  min-width: 800px;
+  min-height: 50%;
+  width: auto;
+  display: flex;
+  z-index: 2;
+  background-color: rgba(117, 117, 117, 0.1);
+  border-radius: 25px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  backdrop-filter: blur(5px);
 }
 
 .content {
@@ -61,6 +69,55 @@ main {
   align-items: center;
 }
 
-.soon {
-  margin-top: 5vh;
+.tech-stack .section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  height: auto;
+  gap: 1vh;
+}
+
+.tech-stack .section .icon {
+  width: 42px;
+}
+
+.project {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.project-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.project-img img {
+  transition: transform 0.5s ease; /* smooth animation */
+  transform: scale(1.1);
+  filter: brightness(30%);
+}
+
+.project-img img:hover {
+  transform: scale(1);
+}
+
+.project .overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 999;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.342);
+  display: flex;
+  padding-left: 25px;
+  pointer-events: none;
+}
+
+.project .overlay p {
+  font-size: 1.4rem;
 }
