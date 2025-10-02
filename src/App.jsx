@@ -26,7 +26,7 @@ function App() {
         </div>
         <div className="hero-description">
           <h1>Dawid Kowalski</h1>
-          <p>Utvecklare och mycket mer..</p>
+          <p>Hello, I am Dawid. A self-taught developer pursuing my dreams!</p>
         </div>
         <div className="socials">
           <SocialIcons />
